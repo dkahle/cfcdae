@@ -31,6 +31,10 @@ qdunnett <- function(ngroups,errordf,alpha=.025,twosided=FALSE)
 	{
 		stop("errordf must be a positive integer greater than 1")
 	}
+	# Changed from 1.4-11 (DK, 2026-09-21, #1): errordf has just been checked to be an
+	# integer to within 1e-7, but mvtnorm requires it to be one exactly, and Kenward-Roger
+	# df from lmer fits arrive as, e.g., 51.0000000000002.
+	errordf <- round(errordf,0)
 	if(!is.numeric(alpha) || length(alpha) > 1 || alpha <=0
 		|| alpha >= 1)
 	{
