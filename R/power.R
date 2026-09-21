@@ -222,7 +222,9 @@ sample.size.f.test <- function(reqpower,alpha=.05,means=NULL,sigma2=NULL,ncp1=NU
 		{
 			stop("missing values not allowed in ncp1 or ngrps")
 		}
-		if(any(ncp1 <= 0, ngrps <= 0, abs(ngrps-round(ngrps,0) > 1e-7)))
+		# Changed from 1.4-11 (DK, 2026-09-21, #2): the closing parenthesis of abs() was
+		# after the comparison, so ngrps such as 3.7 passed and were truncated to 3.
+		if(any(ncp1 <= 0, ngrps <= 0, abs(ngrps-round(ngrps,0)) > 1e-7))
 		{
 			stop("ncp1 must be positive, and ngrps must be a positive integer")
 		}
