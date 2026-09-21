@@ -2,7 +2,10 @@ Package: cfcdae
 Title: Companion to a First Course in Design and Analysis of
         Experiments
 Version: 1.4-11.1
-Authors@R: person("Gary W.","Oehlert",email="gary@umn.edu", role=c("aut", "cre"))
+Authors@R: c(
+    person("Gary W.","Oehlert",email="gary@umn.edu", role=c("aut", "cre")),
+    person("David","Kahle",email="david@kahle.io", role="ctb",
+           comment="Secondary maintainer: keeps the GitHub distribution at https://github.com/dkahle/cfcdae installable on current versions of R, so that students can install the package with one command. Changes made there since 1.4-11 are listed in NEWS.md."))
 Description: A collection of functions and data to accompany the book
 	_A First Course in Design and Analysis of Experiments_, second edition,
 	by Gary W. Oehlert. Some functions have analogs in other packages
@@ -11,12 +14,10 @@ Description: A collection of functions and data to accompany the book
 	comparisons).
 Imports: mvtnorm, pbkrtest, nlme, lme4, stats, DoE.base
 License: GPL (>= 2)
+URL: https://users.stat.umn.edu/~gary/Book.html
 Date: 2026-09-21
 RoxygenNote: 7.2.1
 Depends: R (>= 3.5.0)
 Encoding: UTF-8
 LazyData: true
 NeedsCompilation: no
-Packaged: 2023-01-09 21:52:46 UTC; gary
-Author: Gary W. Oehlert [aut, cre]
-Maintainer: Gary W. Oehlert <gary@umn.edu>

@@ -16,6 +16,14 @@ is also marked with a comment at the place it was made.
   parenthesis let values that round up, such as 3.7, through; they were then
   silently truncated (#2).
 
+## Package metadata
+
+* `DESCRIPTION`: Gary Oehlert remains author and maintainer. David Kahle is
+  added as a contributor, with a note that he maintains this GitHub
+  distribution; `URL` now points to the book's web page; and the `Packaged`,
+  `Author` and `Maintainer` fields, which R regenerates whenever the package is
+  built, were removed from the source file.
+
 ## Known problems
 
 * `compare.to.control()` and `compare.to.best()` stop with "errordf must be a
