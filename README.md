@@ -49,8 +49,10 @@ to him; it is licensed GPL (>= 2).
 
 The tag [`v1.4-11`](https://github.com/dkahle/cfcdae/releases/tag/v1.4-11) is
 his release exactly as distributed (`cfcdae_1.4-11.tar.gz`, sha256
-`f722fa9897c5d70ea1c4e97f4b9870a723c34b78200857bf439e5ee512266924`). To install
-precisely that version:
+`f722fa9897c5d70ea1c4e97f4b9870a723c34b78200857bf439e5ee512266924`). The
+`main` branch carries a small number of bug fixes on top of it, each listed in
+[NEWS.md](NEWS.md) and marked in the code. To install precisely his version
+instead:
 
 ```r
 remotes::install_github("dkahle/cfcdae@v1.4-11")
